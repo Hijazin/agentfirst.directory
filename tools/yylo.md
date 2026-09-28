@@ -2,17 +2,17 @@
 slug: "yylo"
 name: "YYLO"
 description: "Command-line orchestrator for coding agents with typed task, validation, merge, and release-readiness boundaries and receipt-backed repository changes"
-agentSummary: "YYLO is for developers and project operators who want coding agents to work through explicit repository boundaries. It creates exact-base task worktrees, collects receipt-backed validation evidence, and routes completed changes through a fenced merge queue with review depth based on risk. Agent providers and release or deployment authority remain external."
+agentSummary: "YYLO is for developers and project operators who want coding agents to work through explicit repository boundaries. In Advanced workspaces it creates exact-base task worktrees, collects receipt-backed validation evidence, and lands completed changes through a managed one-task native Git merge recorded in Ledger; tests and semantic review remain explicit external project checks. Agent providers and release or deployment authority remain external."
 seoTitle: "YYLO: Typed Task Orchestration for Coding Agents"
-seoDescription: "Explore YYLO's CLI workflow for isolated coding-agent worktrees, receipt-backed validation, and risk-based merge review before repository changes land."
+seoDescription: "Explore YYLO's Advanced-mode workflow for isolated coding-agent task worktrees, receipt-backed validation, and managed native Git delivery for repository changes."
 category: "orchestrators"
 tags:
   - "coding-agents"
   - "cli"
   - "git-worktrees"
   - "task-management"
-  - "merge-queue"
-websiteUrl: "https://github.com/yylo-dev/yylo"
+  - "native-git"
+websiteUrl: "https://yylo.dev"
 githubUrl: "https://github.com/yylo-dev/yylo"
 pricing: "open-source"
 classification: "agent-native"
@@ -32,8 +32,8 @@ evidenceSources:
     sourceType: "official-repository"
   - title: "YYLO CLI typed task and merge flow documentation"
     url: "https://github.com/yylo-dev/yylo#typed-task-and-merge-flow"
-    claim: "The documentation describes task start freezing the protected target SHA and creating a dedicated branch/worktree for implementation, preflight and finish gating, and a merge queue that owns risk-based review with zero, one, or two sequential reviewers depending on risk."
-    accessedAt: "2026-09-08"
+    claim: "The documentation describes task start freezing the protected target SHA and creating a dedicated branch/worktree for implementation in Advanced workspaces, preflight and finish gating that verifies a clean committed result and queues it without merging, and merge land composing one immutable task source with native Git and expected-old ref protection. Tests and semantic reviews are explicit project checks outside merge, which launches no models, chooses no reviewers, schedules no suites, and maintains no validation cache."
+    accessedAt: "2026-09-28"
     sourceType: "official-documentation"
   - title: "YYLO CLI npm registry metadata"
     url: "https://registry.npmjs.org/@yylo/cli"
@@ -43,18 +43,18 @@ evidenceSources:
 verificationLevel: "documentation-reviewed"
 reviewedBy: "foo-bender"
 reviewedAt: "2026-09-26"
-classificationRationaleMd: "YYLO is agent-native because coding agents are the actors it coordinates: it launches agent runs, routes typed tasks into dedicated worktrees, and gates protected merges behind a queued, risk-based review process."
-inclusionRationaleMd: "Agents work on assigned tasks in isolated exact-base worktrees, produce receipt-backed commits with bounded logs, and land changes through a fenced merge queue, keeping agent-built repository changes reviewable and recoverable."
-bestForMd: "Developers and project operators who want coding agents to work in isolated task worktrees with a typed lifecycle, validation evidence, and risk-based merge review."
+classificationRationaleMd: "YYLO is agent-native because coding agents are the actors it coordinates: it launches agent runs, routes typed tasks into dedicated Advanced-mode worktrees, and delivers protected changes through a managed one-task native Git merge recorded in Ledger."
+inclusionRationaleMd: "Agents work on assigned tasks in isolated exact-base Advanced-mode worktrees, produce receipt-backed commits with bounded logs, and land changes through managed native Git delivery with expected-old ref protection, keeping agent-built repository changes reviewable and recoverable."
+bestForMd: "Developers and project operators who want coding agents to work in isolated Advanced-mode task worktrees with a typed lifecycle, validation evidence, and managed native Git delivery."
 notBestForMd: "Teams seeking a hosted multi-tenant control plane, a visual dashboard, or orchestration of non-coding business agents."
 limitationsMd: "Provider credentials and model availability remain external, coding-agent support relies on separately installed agents such as Pi or Codex, and tagging, publication, deployment, and production mutation require separate authority."
 unknownsMd: "No independent benchmark of orchestration reliability or scale has been reviewed for this listing."
 ---
 
-YYLO is a command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository changes. Developers can run a quick agent loop, while project operators assign typed tasks that create dedicated branch/worktree environments, collect validation evidence, and land changes through a fenced merge queue with risk-based review.
+YYLO is a command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository changes. Developers can run a quick agent loop, while project operators assign typed tasks that, in Advanced workspaces, create dedicated branch/worktree environments, collect validation evidence, and land changes through managed native Git delivery that records verified integration in Ledger.
 
 ## So agents can...
 
-- Work on an assigned task in a dedicated, exact-base worktree instead of the shared checkout
+- Work on an assigned task in a dedicated, exact-base worktree instead of the shared checkout (Advanced workspaces; Simple mode keeps one shared checkout for bookkeeping)
 - Produce receipt-backed commits with bounded logs and terminal-state evidence
-- Land changes through a merge queue that sizes review to risk, from no semantic reviewer to two sequential reviewers
+- Land changes through a managed one-task native Git merge with expected-old ref protection — merge launches no models, chooses no reviewers, and schedules no suites; tests and semantic review stay explicit project checks
