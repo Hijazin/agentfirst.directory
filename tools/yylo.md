@@ -35,11 +35,16 @@ evidenceSources:
     claim: "The documentation describes task start freezing the protected target SHA and creating a dedicated branch/worktree for implementation in Advanced workspaces, finish gating that verifies a clean committed result and queues it without merging (preflight is optional, read-only diagnostics, not a gate), and merge land composing one immutable task source with native Git and expected-old ref protection. Tests and semantic reviews are explicit project checks outside merge, which launches no models, chooses no reviewers, schedules no suites, and maintains no validation cache."
     accessedAt: "2026-09-29"
     sourceType: "official-documentation"
-  - title: "YYLO CLI npm registry metadata"
+  - title: "YYLO CLI npm registry metadata (published artifact 0.2.10)"
     url: "https://registry.npmjs.org/@yylo/cli"
-    claim: "The npm registry metadata for @yylo/cli (MIT) shows the published package with bin commands yylo, yy, and ypl, confirming npm distribution of the yylo and yy commands. Version channels are disclosed rather than conflated: the product website identifies 0.2.2 as the current stable release and 0.2.3-rc.3 as prerelease, while the registry's latest tag points at 0.2.10, an artifact whose own README marks it unreleased source. Capability claims in this listing are pinned to the documented stable channel and current repository documentation, not to the 0.2.10 registry artifact."
-    accessedAt: "2026-09-29"
+    claim: "The npm registry metadata for @yylo/cli (MIT) shows the published package with bin commands including yylo, yy, and ypl. Its dist-tags point latest at 0.2.10 and next at 0.2.3-rc.3. The published 0.2.10 artifact embeds a README that is byte-for-byte the current repository README, so the repository-README-derived wording in this listing is the published artifact's own wording. Capability claims in this listing are pinned to this exact published npm 0.2.10 artifact. This registry evidence supports the package, bins, license metadata, dist-tags, and embedded README only; it does not support the product website's version labels, which are cited as their own evidence item below."
+    accessedAt: "2026-09-30"
     sourceType: "official-documentation"
+  - title: "YYLO product website version labels"
+    url: "https://yylo.dev"
+    claim: "The product website and its docs identify 0.2.2 as the current stable release and 0.2.3-rc.3 as prerelease, describe Simple/Advanced behavior as source-candidate behavior, and verify native-Git delivery for 0.2.3-rc.3. These stable-channel labels lag the published registry artifact and that stable channel does not contain the capabilities described in this listing; the listing's version anchor is the npm 0.2.10 artifact whose README is the current repository README. The disagreement between the website's stable-channel text and the registry's latest artifact is disclosed here rather than relied on for any capability claim."
+    accessedAt: "2026-09-30"
+    sourceType: "official-product-page"
 verificationLevel: "documentation-reviewed"
 reviewedBy: "foo-bender"
 reviewedAt: "2026-09-26"
@@ -48,7 +53,7 @@ inclusionRationaleMd: "Agents work on assigned tasks in isolated exact-base Adva
 bestForMd: "Developers and project operators who want coding agents to work in isolated Advanced-mode task worktrees with a typed lifecycle, validation evidence, and managed native Git delivery."
 notBestForMd: "Teams seeking a hosted multi-tenant control plane, a visual dashboard, or orchestration of non-coding business agents."
 limitationsMd: "Provider credentials and model availability remain external, coding-agent support relies on separately installed agents such as Pi or Codex, and tagging, publication, deployment, and production mutation require separate authority."
-unknownsMd: "No independent benchmark of orchestration reliability or scale has been reviewed for this listing. First-party version surfaces currently disagree: the website names 0.2.2 stable and 0.2.3-rc.3 prerelease while npm latest points at 0.2.10 (marked unreleased source by its own README); capability claims here follow the documented stable channel and repository documentation."
+unknownsMd: "No independent benchmark of orchestration reliability or scale has been reviewed for this listing. First-party version surfaces disagree: the website names 0.2.2 stable and 0.2.3-rc.3 prerelease while npm latest points at 0.2.10. Capability claims in this listing are pinned to the published npm 0.2.10 artifact, whose embedded README is byte-for-byte the current repository README; the website's stable-channel text is treated as stale relative to that artifact and is not relied on for any capability claim."
 ---
 
 YYLO is a command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository changes. Developers can run a quick agent loop, while project operators assign typed tasks that, in Advanced workspaces, create dedicated branch/worktree environments, collect validation evidence, and land changes through managed native Git delivery that records the verified Git result with separate, retryable Ledger projection.
