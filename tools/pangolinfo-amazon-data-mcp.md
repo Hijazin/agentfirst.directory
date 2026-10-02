@@ -2,6 +2,9 @@
 slug: "pangolinfo-amazon-data-mcp"
 name: "Pangolinfo Amazon Data MCP"
 description: "A hosted MCP service providing structured Amazon product, search, review, seller, and category data for agent-led e-commerce research."
+agentSummary: "Pangolinfo Amazon Data MCP helps agent builders connect research workflows to structured Amazon product, search, review, seller, and category data through a hosted Streamable HTTP endpoint or local stdio bridge. It suits interactive ASIN, catalog, and market analysis where agents need discoverable schemas and can chain current data tools. Access requires a Pangolinfo API key, and chargeable data calls consume shared API credits."
+seoTitle: "Pangolinfo Amazon Data MCP for Agent Research"
+seoDescription: "Connect agents to Amazon product, search, review, seller, and category data through Pangolinfo's hosted MCP endpoint or local stdio bridge."
 category: "web-crawling-data-extraction"
 tags: ["mcp", "amazon", "ecommerce", "data-extraction", "market-research"]
 websiteUrl: "https://www.pangolinfo.com/amazon-data-mcp/"
@@ -14,6 +17,8 @@ docsUrl: "https://docs.pangolinfo.com/en-help-center/mcp/overview"
 interfaces: ["MCP", "Streamable HTTP", "stdio"]
 deploymentModes: ["Hosted service", "Local stdio bridge"]
 verificationLevel: "documentation-reviewed"
+reviewedBy: "foo-bender"
+reviewedAt: "2026-10-02"
 classificationRationaleMd: "Structured e-commerce data and discoverable MCP tools let agents combine product, review, seller, and category research."
 inclusionRationaleMd: "The listed product is the hosted data service, not just its bridge: it retrieves Amazon data for documented ASIN audits, seller-catalog analysis, and keyword research."
 bestForMd: "Agent builders conducting Amazon product research and market analysis."
