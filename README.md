@@ -41,6 +41,8 @@ A listing should be rejected when its only support is:
 
 General-purpose products can qualify as `agent-enabling` when their documented capabilities materially empower agent-first workflows. Conversely, adding an agent integration does not automatically qualify a product.
 
+For coding-agent orchestrators, the product must own a material lifecycle across agent runs rather than merely invoke an agent. Evidence should show lifecycle controls such as task assignment and isolation, retained or shared state or validation evidence, and a separate gate that determines completion, review, or landing. Merely launching one agent, supplying prompts, wrapping an API or MCP server, advertising agent compatibility, or automating an ordinary developer task does not satisfy this boundary.
+
 When evidence is ambiguous, do not invent a rationale: request stronger first-party evidence or reject the listing.
 
 ## Structure
@@ -59,10 +61,10 @@ Example:
   "seoTitle": "Orchestration platforms for teams of AI agents",
   "descriptionMd": "Control planes and runtimes that coordinate agents, tasks, state, governance, and human review.",
   "definitionMd": "This category covers systems whose main purpose is coordinating agent work across multiple runs, roles, workers, or workflows.",
-  "scopeMd": "Includes control planes and runtimes that coordinate multiple agents or runs through task assignment, shared state, scheduling, observability, budgets, approvals, or governance.",
-  "inclusionMd": "- Coordinates multiple agents or runs.\n- Provides shared state, observability, budgets, approvals, or governance.",
-  "exclusionMd": "- A single-agent framework with no coordination layer.\n- A generic scheduler that merely launches an agent.",
-  "selectionGuideMd": "- Which runtimes can participate?\n- How are state, failures, budgets, and approvals handled?",
+  "scopeMd": "Includes control planes and runtimes that coordinate multiple agents or runs through task assignment, isolation, shared state, scheduling, observability, budgets, approvals, or governance. A coding-agent orchestrator must own a material lifecycle across runs, including a separate completion, review, or landing gate.",
+  "inclusionMd": "- Coordinates multiple agents or runs.\n- Provides shared state, observability, budgets, approvals, or governance.\n- For coding agents, owns task assignment and isolation, retained or shared state or validation evidence, and a separate completion, review, or landing gate.",
+  "exclusionMd": "- A single-agent framework with no coordination layer.\n- A generic scheduler that merely launches an agent.\n- A coding tool that only supplies prompts, wraps an API or MCP server, adds agent compatibility, or automates an ordinary developer task.",
+  "selectionGuideMd": "- Which runtimes can participate?\n- How are state, failures, budgets, and approvals handled?\n- For coding agents, which controls span runs and what separate gate determines completion, review, or landing?",
   "useCases": [
     "Coordinate long-running agent work",
     "Apply budgets and approval controls"
