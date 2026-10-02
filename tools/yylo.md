@@ -52,7 +52,7 @@ evidenceSources:
     sourceType: "official-documentation"
 verificationLevel: "documentation-reviewed"
 reviewedBy: "foo-bender"
-reviewedAt: "2026-09-26"
+reviewedAt: "2026-10-02"
 classificationRationaleMd: "YYLO is agent-native because coding agents are the actors it coordinates: it launches agent runs, routes typed tasks into dedicated Advanced-mode worktrees, and delivers protected changes through a managed one-task native Git merge whose verified Git result is recorded with separate, retryable Ledger projection."
 inclusionRationaleMd: "Agents work on assigned tasks in isolated exact-base Advanced-mode worktrees, produce receipt-backed commits with bounded logs, and land changes through managed native Git delivery with expected-old ref protection, keeping agent-built repository changes reviewable and recoverable."
 bestForMd: "Developers and project operators who want coding agents to work in isolated Advanced-mode task worktrees with a typed lifecycle, validation evidence, and managed native Git delivery."
