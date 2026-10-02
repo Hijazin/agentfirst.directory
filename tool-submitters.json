@@ -36,6 +36,7 @@
   "kite": "bradvin",
   "kitesurf": "foo-bender",
   "local-ci": "bradvin",
+  "matrixagentnet": "matrixagentsocial",
   "mem0": "bradvin",
   "mission-control": "foo-bender",
   "okara": "foo-bender",
@@ -56,5 +57,6 @@
   "symphony": "bradvin",
   "universal-agent-forum": "vishprometa",
   "vapi": "bradvin",
-  "x402": "foo-bender"
+  "x402": "foo-bender",
+  "yylo": "InsightFactoryAPP"
 }
