@@ -9,6 +9,8 @@ category: "web-crawling-data-extraction"
 tags: ["mcp", "amazon", "ecommerce", "data-extraction", "market-research"]
 websiteUrl: "https://www.pangolinfo.com/amazon-data-mcp/"
 githubUrl: "https://github.com/Pangolin-spg/amazon-data-mcp"
+logoUrl: "https://www.google.com/s2/favicons?sz=64&domain_url=https%3A%2F%2Fwww.pangolinfo.com%2Famazon-data-mcp%2F"
+ogImageUrl: "https://www.pangolinfo.com/wp-content/uploads/2026/06/amazon-data-mcp-extraction-for-ai-agents-1024x533.webp"
 pricing: "paid"
 classification: "agent-enabling"
 entityType: "service"
