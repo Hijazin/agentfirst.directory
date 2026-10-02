@@ -305,9 +305,23 @@ This section should usually be a short bullet list of concrete agent outcomes. A
 
 ## Behind The Scenes
 
+Before opening an internal tool PR, generate repo-managed submitter metadata using the actual GitHub PR author and the exact new tool slug (repeat `--slug` for multiple tools):
+
+```bash
+git fetch origin main
+git worktree add --detach ../agentfirst-base origin/main
+npm run sync:tool-submitters -- --base-root-dir ../agentfirst-base --submitted-by ACTUAL_PR_AUTHOR --slug EXACT_NEW_SLUG
+git worktree remove ../agentfirst-base
+npm run validate:content -- --require-submitters
+```
+
+Commit `tool-submitters.json` along with the tool file before opening the PR. Do not put `submittedBy` in tool frontmatter. The trusted base preserves attribution for existing tools; new tools are attributed to the actual PR author.
+
+For both same-repository and fork PRs, enrichment is a branch-read-only preflight: it never commits or pushes. Missing generated metadata produces one updated correction comment and a failing preflight until the contributor commits the changes. Media generation runs only after an approved review; use the comment's exact local commands, validate, and commit any generated media changes. Fork validation still uses GitHub's normal workflow-approval rules.
+
 After a tool PR is approved, the repo handles a few things automatically:
 
-- author attribution is derived from the PR author
+- author attribution is checked against the trusted base and the PR author
 - missing `logoUrl` defaults to a Google favicon URL based on `websiteUrl`
 - missing `ogImageUrl` is discovered from the tool website's social metadata when available
 - D1 receives authored editorial, evidence, entity, and provenance fields
