@@ -5,6 +5,7 @@ description: Hosted MCP for agents to create and edit images, match visuals to w
 category: storage-media-hosting
 tags: [image-generation, image-editing, visual-assets, svg, mcp]
 websiteUrl: https://eye.art/polyphemus
+logoUrl: "https://www.google.com/s2/favicons?sz=64&domain_url=https%3A%2F%2Feye.art%2Fpolyphemus"
 pricing: free
 classification: agent-enabling
 entityType: service
