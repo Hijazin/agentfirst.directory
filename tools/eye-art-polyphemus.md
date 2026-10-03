@@ -2,6 +2,10 @@
 slug: eye-art-polyphemus
 name: Eye.Art Polyphemus
 description: Hosted MCP for agents to create and edit images, match visuals to webpages, generate SVG, and explore prompt directions
+seoTitle: "Eye.Art Polyphemus: Image Creation and Editing for Agents"
+seoDescription: "Create and edit images, request webpage-matched visuals, and generate editable SVG through Eye.Art Polyphemus, a hosted MCP with documented retention limits."
+reviewedBy: "foo-bender"
+reviewedAt: "2026-10-03"
 category: storage-media-hosting
 tags: [image-generation, image-editing, visual-assets, svg, mcp]
 websiteUrl: https://eye.art/polyphemus
