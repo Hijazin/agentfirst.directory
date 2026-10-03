@@ -4,7 +4,7 @@ name: "OpenRig"
 description: "Local control plane for persistent Claude Code and Codex teams with durable work ownership, review, proof, and restore state"
 agentSummary: "OpenRig lets a lead coding agent route work to named Claude Code and Codex seats without a person relaying messages between terminals. Its local control plane retains task ownership, proof, transcripts, and restore state, while the shipped starter separates implementation from an independent check before a person decides whether to publish the change."
 seoTitle: "OpenRig Persistent Teams for Claude Code and Codex"
-seoDescription: "Run named Claude Code and Codex seats as a local team with durable task ownership, independent checks, proof records, and honest restore outcomes."
+seoDescription: "Run named Claude Code and Codex seats as a local team with durable task ownership, independent checks, proof records, and explicit restore outcomes."
 category: "orchestrators"
 tags:
   - "coding-agents"
@@ -23,6 +23,7 @@ licenseUrl: "https://github.com/mvschwarz/openrig/blob/v0.6.4/LICENSE"
 interfaces:
   - "CLI"
   - "terminal UI"
+  - "MCP"
 deploymentModes:
   - "local self-hosted"
 evidenceSources:
@@ -53,12 +54,12 @@ evidenceSources:
     sourceType: "official-license"
 verificationLevel: "documentation-reviewed"
 reviewedBy: "foo-bender"
-reviewedAt: "2026-10-02"
+reviewedAt: "2026-10-03"
 classificationRationaleMd: "OpenRig is built around coding agents as persistent, named workers: a lead seat routes work to specialist Claude Code and Codex seats while the control plane retains team topology, task ownership, communication, proof, and recovery state."
 inclusionRationaleMd: "OpenRig owns a material lifecycle across coding-agent runs. It assigns queue-backed work to named seats, runs workers in separate tmux sessions, retains shared state and evidence, and routes a candidate from an owner to an independent checker before a person decides whether to publish it."
 bestForMd: "Developers who already use Claude Code or Codex and want a local, persistent team with explicit roles, durable work ownership, direct cross-harness communication, independent checks, and recoverable seat identities."
 notBestForMd: "Teams seeking a managed cloud service, strong multi-tenant security isolation, native Windows support, or automatic code merging and deployment."
-limitationsMd: "The reviewed v0.6.4 release requires Node.js 22 or 24 and tmux on macOS or Linux, plus separately authenticated Claude Code or Codex accounts. OpenRig provides operational separation between seats, not a security boundary; the starter seats share a project working directory, and provider permissions and sandboxes remain separate. The release notes also report a restore check that can incorrectly flag a working Claude seat, Codex's default sandbox blocking the local daemon, and no automatic daemon restart after reboot."
+limitationsMd: "The reviewed v0.6.4 release requires Node.js 22 or 24 and tmux on macOS or Linux; Apple silicon Macs should use Node.js 22, and WSL2 is untested. Claude Code or Codex accounts must be authenticated separately, and provider model-usage costs still apply. OpenRig provides operational separation, not a security boundary; starter seats share a working directory. Daemon startup and managed launches write provider hooks, trust records and settings, including pre-trusting workspaces; OPENRIG_HOME does not isolate those provider files. Back up relevant settings because there is no complete preservation or rollback guarantee, and rig setup --dry-run does not preview every later effect. Native provider permissions and sandboxes govern execution, while broader command allowances require an explicit choice. Keep the daemon on loopback or a trusted private network, not the public internet. Known release limits include a restore check that can incorrectly flag a working Claude seat, the default Codex sandbox blocking daemon access, and no automatic daemon restart after reboot."
 unknownsMd: "This review did not install or run OpenRig. Pi appears in current marketing and repository source but not in the tagged v0.6.4 first-use path, so it is not claimed here. Slack, multi-host operation, restore behavior, and cross-seat handoffs were not independently tested. The website documentation still identifies version 0.5.14, so release-specific claims are pinned to v0.6.4 sources."
 ---
 
