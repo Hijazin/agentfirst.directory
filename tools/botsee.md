@@ -13,7 +13,6 @@ tags:
   - "research"
   - "cli"
 websiteUrl: "https://botsee.io"
-githubUrl: "https://github.com/RivalSee/botsee-skill"
 pricing: "paid"
 classification: "agent-native"
 entityType: "web-api"
@@ -33,7 +32,7 @@ evidenceSources:
     sourceType: "official-documentation"
   - title: "BotSee Claude Code plugin README"
     url: "https://github.com/RivalSee/botsee-skill"
-    claim: "The maintained BotSee plugin describes structured AI-search data for competitors, keywords, sources, and raw responses, with installation paths for Claude Code and other coding-agent platforms."
+    claim: "This public repository implements the CLI/plugin client and documents structured competitors, keywords, sources, and raw responses. Its MIT license covers the client, not the private hosted analysis backend."
     accessedAt: "2026-10-02"
     sourceType: "official-repository"
 verificationLevel: "documentation-reviewed"
@@ -41,7 +40,7 @@ classificationRationaleMd: "Agents are first-class participants in the documente
 inclusionRationaleMd: "The product provides a substantive, documented measurement workflow for agent-led marketing and AI-search research rather than a generic API wrapper."
 bestForMd: "Technical marketers and agent builders who need a repeatable, reviewable AI-search visibility benchmark instead of manual prompting and spreadsheet collection."
 notBestForMd: "Teams seeking a conventional SEO suite, a passive real-time monitoring feed, or an autonomous publishing system."
-limitationsMd: "Analyses consume credits and results reflect the configured questions, personas, and providers; review the returned source and response records before making marketing decisions."
+limitationsMd: "Analyses consume credits and results reflect the configured questions, personas, and providers; review returned evidence before making marketing decisions. The privacy policy states that brand information, questions, and descriptions are shared with third-party AI services. Free results are public; paid results default to public unless made private through account settings. Account data is retained indefinitely while active; analytics data is retained indefinitely but may be replaced when analyses are regenerated. Deletion requests are handled within 30 days. The policy promises encryption in transit, not end-to-end encryption or a verified encryption-at-rest guarantee. See https://botsee.io/privacy."
 unknownsMd: "No independent benchmark of accuracy, coverage, or cross-provider repeatability was reviewed for this listing."
 ---
 
