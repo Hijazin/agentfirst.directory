@@ -6,6 +6,8 @@ seoTitle: "BotSee: AI Visibility Measurement for Agent Workflows"
 seoDescription: "BotSee lets agent workflows run structured AI-search visibility analyses and retrieve competitors, keywords, cited sources, and raw responses for review."
 agentSummary: "BotSee provides a Claude Code plugin and a direct Python CLI for Codex and comparable agents. An agent can define a site, customer types, personas, and questions; run an analysis; and retrieve structured competitor, keyword, source, and raw-response data for review."
 category: "marketing-seo"
+reviewedBy: "foo-bender"
+reviewedAt: "2026-10-08"
 tags:
   - "ai-visibility"
   - "marketing"
